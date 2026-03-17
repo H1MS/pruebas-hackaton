@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendador de Películas</title>
+</head>
+<body>
+
+    <h2>Selecciona tu mood</h2>
+
+    <select id="moodSelector">
+        <option value="">-- Seleccionar --</option>
+        <option value="feliz">Feliz</option>
+        <option value="triste">Triste</option>
+        <option value="aventurero">Aventurero</option>
+        <option value="chill">Chill</option>
+        <option value="valiente">Valiente</option>
+    </select>
+
+    <ul id="movieList"></ul>
+
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+    <script>
+        const app = new MovieController(
+            new MovieModel(),
+            new MovieView()
+        );
+    </script>
+
+</body>
+</html>
